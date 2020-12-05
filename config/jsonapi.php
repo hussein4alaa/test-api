@@ -1,12 +1,6 @@
 <?php
 return [
     'resources' => [
-//        Upload
-        'upload' => [
-            'image' => 'mimetypes:jpeg, jpg, png',
-            'video' => 'mimetypes:video/avi,video/mpeg,video/quicktime',
-        ],
-
 // Post
         'post' => [
             'allowedSorts' => [

@@ -11,7 +11,7 @@ class JSONAPIService
     public function getWithPaginate($modelClass, string $type)
     {
         $data = QueryBuilder::for($modelClass)
-            ->allowedFields(['id', 'title'])
+            ->allowedFields(config("jsonapi.resources.{$type}.allowedFields"))
             ->allowedSorts(config("jsonapi.resources.{$type}.allowedSorts"))
             ->allowedFilters(config("jsonapi.resources.{$type}.allowedFilters"))
             ->allowedIncludes(config("jsonapi.resources.{$type}.allowedIncludes"))
